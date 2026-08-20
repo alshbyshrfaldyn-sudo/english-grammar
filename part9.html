@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Grammar - الجزء التاسع (Units 25 - 27)</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--card-bg);
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .page-title {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .unit-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .unit-header {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .unit-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            direction: ltr;
+            text-align: left;
+            display: block;
+        }
+
+        .line-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+            direction: ltr;
+        }
+
+        .line-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+
+        .line-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .line-content {
+            font-size: 1.1rem;
+            direction: ltr;
+            text-align: left;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: background 0.2s;
+            width: 100%;
+        }
+
+        .line-content:hover {
+            background-color: #f0f7fc;
+        }
+
+        .word {
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 4px;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .word:hover {
+            background-color: #3498db;
+            color: #ffffff !important;
+        }
+
+        .translation-box {
+            display: none;
+            background-color: #f1f8fe;
+            border-right: 4px solid var(--accent-color);
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: #444;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .grammar-table th, .grammar-table td {
+            border: 1px solid #e1e8ed;
+            padding: 10px 12px;
+            font-size: 0.95rem;
+        }
+
+        .grammar-table th {
+            background-color: #f4f6f8;
+            color: var(--primary-color);
+        }
+
+        #toast {
+            visibility: hidden;
+            min-width: 220px;
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px 20px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.3s, fadeout 0.3s 2.2s;
+        }
+
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+
+    <div id="toast"></div>
+
+    <div class="container">
+
+        <!-- شريط تنقل علوي -->
+        <div class="nav-bar">
+            <a href="Part8.html" class="nav-btn">&rarr; السابق (الجزء 8)</a>
+            <span class="page-title">الجزء التاسع (Units 25 - 27)</span>
+            <a href="Part10.html" class="nav-btn">التالي (الجزء 10) &larr;</a>
+        </div>
+
+        <!-- Unit 25 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 25: What are you doing tomorrow? (Present Continuous for Future)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u25_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'I am playing', 'سألعب')">I am playing</span>
+                    <span class="word" onclick="showWord(event, 'tennis tomorrow.', 'التنس غداً.')">tennis tomorrow.</span>
+                </div>
+            </div>
+            <div id="u25_1" class="translation-box">الترجمة: سألعب التنس غداً. (استخدام المضارع المستمر للترتيبات المستقبلية المؤكدة).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u25_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Alex is getting married', 'أليكس سيتزوج')">Alex is getting married</span>
+                    <span class="word" onclick="showWord(event, 'next month.', 'الشهر القادم.')">next month.</span>
+                </div>
+            </div>
+            <div id="u25_2" class="translation-box">الترجمة: سيتزوج أليكس الشهر القادم. (خطط وترتيبات مسبقة ومؤكدة).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Structure</th>
+                        <th>Usage</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>am / is / are + V-ing</td>
+                        <td>Arranged future plans</td>
+                        <td>We are leaving at 10.00 tomorrow.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 26 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 26: I'm going to... (Future Intentions)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u26_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'I am going to buy', 'أنوي شراء')">I am going to buy</span>
+                    <span class="word" onclick="showWord(event, 'some books.', 'بعض الكتب.')">some books.</span>
+                </div>
+            </div>
+            <div id="u26_1" class="translation-box">الترجمة: أنوي شراء بعض الكتب. (استخدام going to للنوايا والقرارات المسبقة).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u26_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Look at those clouds,', 'انظر لتلك السحب،')">Look at those clouds,</span>
+                    <span class="word" onclick="showWord(event, 'it is going to rain.', 'إنها ستُمطر.')">it is going to rain.</span>
+                </div>
+            </div>
+            <div id="u26_2" class="translation-box">الترجمة: انظر لتلك السحب، ستُمطر. (استخدام going to للتنبؤ المستند على دليل واضح الآن).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Structure</th>
+                        <th>Usage</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>be + going to + Base Verb</td>
+                        <td>Decided intention / Clear evidence</td>
+                        <td>He is going to study computer science.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 27 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 27: will / shall (Future 1)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u27_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'I will travel', 'سأسافر')">I will travel</span>
+                    <span class="word" onclick="showWord(event, 'next week.', 'الأسبوع القادم.')">next week.</span>
+                </div>
+            </div>
+            <div id="u27_1" class="translation-box">الترجمة: سأسافر الأسبوع القادم. (استخدام will للقرارات اللحظية أو التوقعات العامة).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u27_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Shall I open', 'هل أفتح')">Shall I open</span>
+                    <span class="word" onclick="showWord(event, 'the window?', 'النافذة؟')">the window?</span>
+                </div>
+            </div>
+            <div id="u27_2" class="translation-box">الترجمة: هل أفتح النافذة؟ (استخدام Shall I / Shall we لعرض المساعدة أو الاقتراح).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Modal Verb</th>
+                        <th>Usage</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>will ('ll) / won't</td>
+                        <td>Instant decisions, offers, promises, predictions</td>
+                        <td>I'll carry your bag for you.</td>
+                    </tr>
+                    <tr>
+                        <td>Shall I / Shall we...?</td>
+                        <td>Offers and suggestions</td>
+                        <td>Shall we go now?</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- شريط تنقل سفلي -->
+        <div class="nav-bar">
+            <a href="Part8.html" class="nav-btn">&rarr; السابق (الجزء 8)</a>
+            <span class="page-title">الجزء التاسع (Units 25 - 27)</span>
+            <a href="Part10.html" class="nav-btn">التالي (الجزء 10) &larr;</a>
+        </div>
+
+    </div>
+
+    <script>
+        function speakText(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                var msg = new SpeechSynthesisUtterance();
+                msg.text = text;
+                msg.lang = 'en-US';
+                msg.rate = 0.85;
+                window.speechSynthesis.speak(msg);
+            } else {
+                alert("متصفحك لا يدعم النطق الصوتي التلقائي.");
+            }
+        }
+
+        function showWord(e, en, ar) {
+            if (e && e.stopPropagation) {
+                e.stopPropagation();
+            } else {
+                window.event.cancelBubble = true;
+            }
+            
+            speakText(en);
+
+            var toast = document.getElementById("toast");
+            if (toast) {
+                toast.innerText = en + " : " + ar;
+                toast.className = "show";
+                setTimeout(function() {
+                    toast.className = toast.className.replace("show", "");
+                }, 2500);
+            }
+        }
+
+        function speakLine(elem) {
+            var text = elem.innerText || elem.textContent;
+            speakText(text);
+        }
+
+        function toggleTranslation(id) {
+            var box = document.getElementById(id);
+            if (box) {
+                box.style.display = (box.style.display === "block") ? "none" : "block";
+            }
+        }
+    </script>
+</body>
+</html>
+

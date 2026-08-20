@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Grammar - الجزء السابع (Units 19 - 21)</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--card-bg);
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .page-title {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .unit-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .unit-header {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .unit-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            direction: ltr;
+            text-align: left;
+            display: block;
+        }
+
+        .line-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+            direction: ltr;
+        }
+
+        .line-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+
+        .line-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .line-content {
+            font-size: 1.1rem;
+            direction: ltr;
+            text-align: left;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: background 0.2s;
+            width: 100%;
+        }
+
+        .line-content:hover {
+            background-color: #f0f7fc;
+        }
+
+        .word {
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 4px;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .word:hover {
+            background-color: #3498db;
+            color: #ffffff !important;
+        }
+
+        .translation-box {
+            display: none;
+            background-color: #f1f8fe;
+            border-right: 4px solid var(--accent-color);
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: #444;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .grammar-table th, .grammar-table td {
+            border: 1px solid #e1e8ed;
+            padding: 10px 12px;
+            font-size: 0.95rem;
+        }
+
+        .grammar-table th {
+            background-color: #f4f6f8;
+            color: var(--primary-color);
+        }
+
+        #toast {
+            visibility: hidden;
+            min-width: 220px;
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px 20px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.3s, fadeout 0.3s 2.2s;
+        }
+
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+
+    <div id="toast"></div>
+
+    <div class="container">
+
+        <!-- شريط تنقل علوي -->
+        <div class="nav-bar">
+            <a href="Part6.html" class="nav-btn">&rarr; السابق (الجزء 6)</a>
+            <span class="page-title">الجزء السابع (Units 19 - 21)</span>
+            <a href="Part8.html" class="nav-btn">التالي (الجزء 8) &larr;</a>
+        </div>
+
+        <!-- Unit 19 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 19: I have done vs I did (Present Perfect vs Past Simple)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u19_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'I have lost', 'لقد أضعت')">I have lost</span>
+                    <span class="word" onclick="showWord(event, 'my key.', 'مفتاحي.')">my key.</span>
+                    <span class="word" onclick="showWord(event, 'I lost it', 'أضعته')">I lost it</span>
+                    <span class="word" onclick="showWord(event, 'yesterday.', 'بالأمس.')">yesterday.</span>
+                </div>
+            </div>
+            <div id="u19_1" class="translation-box">الترجمة: لقد أضعت مفتاحي (أثر في الحاضر). أضعته بالأمس (تحديد زمني في الماضي البسيط).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u19_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Did you see', 'هل رأيت')">Did you see</span>
+                    <span class="word" onclick="showWord(event, 'Kate this morning?', 'كيت هذا الصباح؟')">Kate this morning?</span>
+                </div>
+            </div>
+            <div id="u19_2" class="translation-box">الترجمة: هل رأيت كيت هذا الصباح؟ (استخدام Past Simple لأن فترة الصباح انتهت).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Tense</th>
+                        <th>Time Concept</th>
+                        <th>Keywords</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Present Perfect</td>
+                        <td>Unfinished time / Connection to now</td>
+                        <td>today, this week, recently, ever</td>
+                    </tr>
+                    <tr>
+                        <td>Past Simple</td>
+                        <td>Finished time in the past</td>
+                        <td>yesterday, last week, in 2015, ago</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 20 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 20: is done / was done (Passive 1 - Present and Past)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u20_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'This office', 'هذا المكتب')">This office</span>
+                    <span class="word" onclick="showWord(event, 'is cleaned', 'يتم تنظيفه')">is cleaned</span>
+                    <span class="word" onclick="showWord(event, 'every day.', 'كل يوم.')">every day.</span>
+                </div>
+            </div>
+            <div id="u20_1" class="translation-box">الترجمة: يتم تنظيف هذا المكتب كل يوم. (المبني للمجهول في المضارع البسيط: is/are + V3).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u20_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'The house was', 'المنزل تم')">The house was</span>
+                    <span class="word" onclick="showWord(event, 'built in 1990.', 'بناؤه عام 1990.')">built in 1990.</span>
+                </div>
+            </div>
+            <div id="u20_2" class="translation-box">الترجمة: بُني المنزل في عام 1990. (المبني للمجهول في الماضي البسيط: was/were + V3).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Tense</th>
+                        <th>Passive Structure</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Present Simple Passive</td>
+                        <td>am / is / are + Past Participle</td>
+                        <td>Butter is made from milk.</td>
+                    </tr>
+                    <tr>
+                        <td>Past Simple Passive</td>
+                        <td>was / were + Past Participle</td>
+                        <td>Two rooms were painted.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 21 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 21: is being done / has been done (Passive 2)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u21_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'My car', 'سيارتي')">My car</span>
+                    <span class="word" onclick="showWord(event, 'is being repaired', 'يتم إصلاحها الان')">is being repaired</span>
+                    <span class="word" onclick="showWord(event, 'at the moment.', 'في الوقت الحالي.')">at the moment.</span>
+                </div>
+            </div>
+            <div id="u21_1" class="translation-box">الترجمة: سيارتي قيد الإصلاح حالياً. (المبني للمجهول في المضارع المستمر: is/are + being + V3).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u21_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'The room', 'الغرفة')">The room</span>
+                    <span class="word" onclick="showWord(event, 'has been cleaned.', 'قد تم تنظيفها.')">has been cleaned.</span>
+                </div>
+            </div>
+            <div id="u21_2" class="translation-box">الترجمة: تم تنظيف الغرفة. (المبني للمجهول في المضارع التام: has/have + been + V3).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Tense</th>
+                        <th>Passive Structure</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Present Continuous Passive</td>
+                        <td>is / are + being + Past Participle</td>
+                        <td>A new road is being built.</td>
+                    </tr>
+                    <tr>
+                        <td>Present Perfect Passive</td>
+                        <td>has / have + been + Past Participle</td>
+                        <td>The key has been found.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- شريط تنقل سفلي -->
+        <div class="nav-bar">
+            <a href="Part6.html" class="nav-btn">&rarr; السابق (الجزء 6)</a>
+            <span class="page-title">الجزء السابع (Units 19 - 21)</span>
+            <a href="Part8.html" class="nav-btn">التالي (الجزء 8) &larr;</a>
+        </div>
+
+    </div>
+
+    <script>
+        function speakText(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                var msg = new SpeechSynthesisUtterance();
+                msg.text = text;
+                msg.lang = 'en-US';
+                msg.rate = 0.85;
+                window.speechSynthesis.speak(msg);
+            } else {
+                alert("متصفحك لا يدعم النطق الصوتي التلقائي.");
+            }
+        }
+
+        function showWord(e, en, ar) {
+            if (e && e.stopPropagation) {
+                e.stopPropagation();
+            } else {
+                window.event.cancelBubble = true;
+            }
+            
+            speakText(en);
+
+            var toast = document.getElementById("toast");
+            if (toast) {
+                toast.innerText = en + " : " + ar;
+                toast.className = "show";
+                setTimeout(function() {
+                    toast.className = toast.className.replace("show", "");
+                }, 2500);
+            }
+        }
+
+        function speakLine(elem) {
+            var text = elem.innerText || elem.textContent;
+            speakText(text);
+        }
+
+        function toggleTranslation(id) {
+            var box = document.getElementById(id);
+            if (box) {
+                box.style.display = (box.style.display === "block") ? "none" : "block";
+            }
+        }
+    </script>
+</body>
+</html>
+

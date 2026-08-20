@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Grammar - الجزء الواحد والثلاثون (Units 91 - 93)</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--card-bg);
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .page-title {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .unit-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .unit-header {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .unit-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            direction: ltr;
+            text-align: left;
+            display: block;
+        }
+
+        .line-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+            direction: ltr;
+        }
+
+        .line-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+
+        .line-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .line-content {
+            font-size: 1.1rem;
+            direction: ltr;
+            text-align: left;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: background 0.2s;
+            width: 100%;
+        }
+
+        .line-content:hover {
+            background-color: #f0f7fc;
+        }
+
+        .word {
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 4px;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .word:hover {
+            background-color: #3498db;
+            color: #ffffff !important;
+        }
+
+        .translation-box {
+            display: none;
+            background-color: #f1f8fe;
+            border-right: 4px solid var(--accent-color);
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: #444;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .grammar-table th, .grammar-table td {
+            border: 1px solid #e1e8ed;
+            padding: 10px 12px;
+            font-size: 0.95rem;
+        }
+
+        .grammar-table th {
+            background-color: #f4f6f8;
+            color: var(--primary-color);
+        }
+
+        #toast {
+            visibility: hidden;
+            min-width: 220px;
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px 20px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.3s, fadeout 0.3s 2.2s;
+        }
+
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+
+    <div id="toast"></div>
+
+    <div class="container">
+
+        <!-- شريط تنقل علوي -->
+        <div class="nav-bar">
+            <a href="Part30.html" class="nav-btn">&rarr; السابق (الجزء 30)</a>
+            <span class="page-title">الجزء الواحد والثلاثون (Units 91 - 93)</span>
+            <a href="Part32.html" class="nav-btn">التالي (الجزء 32) &larr;</a>
+        </div>
+
+        <!-- Unit 91 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 91: by / with / without</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u91_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'She went to work by bus', 'ذهبت إلى العمل بالحافلة')">She went to work by bus</span>
+                    <span class="word" onclick="showWord(event, 'with her friends.', 'مع أصدقائها.')">with her friends.</span>
+                </div>
+            </div>
+            <div id="u91_1" class="translation-box">الترجمة: ذهبت إلى العمل بالحافلة مع أصدقائها. (استخدام by للوسائل و with للمرافقة/الأدوات).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u91_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'You cannot live without water', 'لا يمكنك العيش بدون ماء')">You cannot live without water</span>
+                    <span class="word" onclick="showWord(event, 'or oxygen.', 'أو أكسجين.')">or oxygen.</span>
+                </div>
+            </div>
+            <div id="u91_2" class="translation-box">الترجمة: لا يمكنك العيش بدون ماء أو أكسجين. (استخدام without للغطاء أو الغياب).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Preposition</th>
+                        <th>Usage</th>
+                        <th>Examples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>by</b></td>
+                        <td>وسائل النقل والطرق، والفاعل في المبني للمجهول</td>
+                        <td><b>by</b> bus/car/train, <b>by</b> chance, written <b>by</b> Shakespeare</td>
+                    </tr>
+                    <tr>
+                        <td><b>with</b></td>
+                        <td>الصحبة، واستخدام الأداة، والمميزات</td>
+                        <td><b>with</b> my family, cut <b>with</b> a knife, a man <b>with</b> glasses</td>
+                    </tr>
+                    <tr>
+                        <td><b>without</b></td>
+                        <td>بدون / خالي من (متبوعة باسم أو Verb-ing)</td>
+                        <td><b>without</b> money, <b>without</b> saying goodbye</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 92 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 92: Adjectives + Prepositions (afraid of, good at, etc.)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u92_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Are you afraid of dogs?', 'هل تخاف من الكلاب؟')">Are you afraid of dogs?</span>
+                    <span class="word" onclick="showWord(event, 'No, I am good at handling them.', 'لا، أنا جيد في التعامل معها.')">No, I am good at handling them.</span>
+                </div>
+            </div>
+            <div id="u92_1" class="translation-box">الترجمة: هل تخاف من الكلاب؟ لا، أنا جيد في التعامل معها. (الصفات تأخذ حروف جر محددة دائماً).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Adjective + Preposition</th>
+                        <th>Meaning</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>afraid of / proud of</b></td>
+                        <td>خائف من / فخور بـ</td>
+                        <td>She is <b>afraid of</b> spiders.</td>
+                    </tr>
+                    <tr>
+                        <td><b>good at / bad at</b></td>
+                        <td>جيد في / سيء في</td>
+                        <td>He is <b>good at</b> programming.</td>
+                    </tr>
+                    <tr>
+                        <td><b>interested in / famous for</b></td>
+                        <td>مهتم بـ / مشهور بـ</td>
+                        <td>I am <b>interested in</b> AI technology.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 93 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 93: Verbs + Prepositions (listen to, look at, etc.)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u93_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Please listen to me', 'من فضلك استمع إلي')">Please listen to me</span>
+                    <span class="word" onclick="showWord(event, 'and look at this photo.', 'وانظر إلى هذه الصورة.')">and look at this photo.</span>
+                </div>
+            </div>
+            <div id="u93_1" class="translation-box">الترجمة: من فضلك استمع إلي وانظر إلى هذه الصورة. (أفعال ترتبط بحروف جر معينة).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u93_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Are you waiting for the bus?', 'هل تنتظر الحافلة؟')">Are you waiting for the bus?</span>
+                </div>
+            </div>
+            <div id="u93_2" class="translation-box">الترجمة: هل تنتظر الحافلة؟ (الفعل wait يأخذ دائماً حرف الجر for عند تحديد المنتظَر).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Verb + Preposition</th>
+                        <th>Meaning</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>listen to</b></td>
+                        <td>يستمع إلى</td>
+                        <td>I <b>listen to</b> poetry in my free time.</td>
+                    </tr>
+                    <tr>
+                        <td><b>look at / look for</b></td>
+                        <td>ينظر إلى / يبحث عن</td>
+                        <td>What are you <b>looking for</b>?</td>
+                    </tr>
+                    <tr>
+                        <td><b>wait for / ask for</b></td>
+                        <td>ينتظر / يطلب</td>
+                        <td>We are <b>waiting for</b> the doctor.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- شريط تنقل سفلي -->
+        <div class="nav-bar">
+            <a href="Part30.html" class="nav-btn">&rarr; السابق (الجزء 30)</a>
+            <span class="page-title">الجزء الواحد والثلاثون (Units 91 - 93)</span>
+            <a href="Part32.html" class="nav-btn">التالي (الجزء 32) &larr;</a>
+        </div>
+
+    </div>
+
+    <script>
+        function speakText(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                var msg = new SpeechSynthesisUtterance();
+                msg.text = text;
+                msg.lang = 'en-US';
+                msg.rate = 0.85;
+                window.speechSynthesis.speak(msg);
+            } else {
+                alert("متصفحك لا يدعم النطق الصوتي التلقائي.");
+            }
+        }
+
+        function showWord(e, en, ar) {
+            if (e && e.stopPropagation) {
+                e.stopPropagation();
+            } else {
+                window.event.cancelBubble = true;
+            }
+            
+            speakText(en);
+
+            var toast = document.getElementById("toast");
+            if (toast) {
+                toast.innerText = en + " : " + ar;
+                toast.className = "show";
+                setTimeout(function() {
+                    toast.className = toast.className.replace("show", "");
+                }, 2500);
+            }
+        }
+
+        function speakLine(elem) {
+            var text = elem.innerText || elem.textContent;
+            speakText(text);
+        }
+
+        function toggleTranslation(id) {
+            var box = document.getElementById(id);
+            if (box) {
+                box.style.display = (box.style.display === "block") ? "none" : "block";
+            }
+        }
+    </script>
+</body>
+</html>
+

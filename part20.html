@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Grammar - الجزء العشرون (Units 58 - 60)</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--card-bg);
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .page-title {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .unit-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .unit-header {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .unit-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            direction: ltr;
+            text-align: left;
+            display: block;
+        }
+
+        .line-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+            direction: ltr;
+        }
+
+        .line-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+
+        .line-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .line-content {
+            font-size: 1.1rem;
+            direction: ltr;
+            text-align: left;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: background 0.2s;
+            width: 100%;
+        }
+
+        .line-content:hover {
+            background-color: #f0f7fc;
+        }
+
+        .word {
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 4px;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .word:hover {
+            background-color: #3498db;
+            color: #ffffff !important;
+        }
+
+        .translation-box {
+            display: none;
+            background-color: #f1f8fe;
+            border-right: 4px solid var(--accent-color);
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: #444;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .grammar-table th, .grammar-table td {
+            border: 1px solid #e1e8ed;
+            padding: 10px 12px;
+            font-size: 0.95rem;
+        }
+
+        .grammar-table th {
+            background-color: #f4f6f8;
+            color: var(--primary-color);
+        }
+
+        #toast {
+            visibility: hidden;
+            min-width: 220px;
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px 20px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.3s, fadeout 0.3s 2.2s;
+        }
+
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+
+    <div id="toast"></div>
+
+    <div class="container">
+
+        <!-- شريط تنقل علوي -->
+        <div class="nav-bar">
+            <a href="Part19.html" class="nav-btn">&rarr; السابق (الجزء 19)</a>
+            <span class="page-title">الجزء العشرون (Units 58 - 60)</span>
+            <a href="Part21.html" class="nav-btn">التالي (الجزء 21) &larr;</a>
+        </div>
+
+        <!-- Unit 58 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 58: I / me / my / mine</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u58_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'I know Tom,', 'أنا أعرف توم،')">I know Tom,</span>
+                    <span class="word" onclick="showWord(event, 'and he knows me.', 'وهو يعرفني.')">and he knows me.</span>
+                </div>
+            </div>
+            <div id="u58_1" class="translation-box">الترجمة: أنا أعرف توم وهو يعرفني. (مقارنة بين ضمير الفاعل I وضمير المفعول me).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u58_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'It is my car,', 'إنها سيارتي،')">It is my car,</span>
+                    <span class="word" onclick="showWord(event, 'it is mine.', 'إنها ملكي.')">it is mine.</span>
+                </div>
+            </div>
+            <div id="u58_2" class="translation-box">الترجمة: إنها سيارتي، إنها ملكي. (صفة الملكية my تحتاج اسماً بعدها، بينما ضمير الملكية mine يأتي مستقلاً).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Object</th>
+                        <th>Possessive Adjective</th>
+                        <th>Possessive Pronoun</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>I</td>
+                        <td>me</td>
+                        <td>my + noun</td>
+                        <td>mine</td>
+                    </tr>
+                    <tr>
+                        <td>we</td>
+                        <td>us</td>
+                        <td>our + noun</td>
+                        <td>ours</td>
+                    </tr>
+                    <tr>
+                        <td>you</td>
+                        <td>you</td>
+                        <td>your + noun</td>
+                        <td>yours</td>
+                    </tr>
+                    <tr>
+                        <td>they</td>
+                        <td>them</td>
+                        <td>their + noun</td>
+                        <td>theirs</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 59 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 59: myself / yourself / themselves (Reflexive Pronouns)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u59_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'He cut himself', 'جرح نفسه')">He cut himself</span>
+                    <span class="word" onclick="showWord(event, 'with a knife.', 'بواسطة سكين.')">with a knife.</span>
+                </div>
+            </div>
+            <div id="u59_1" class="translation-box">الترجمة: جرح نفسه بسكين. (الضمائر المنعكسة عندما يكون الفاعل والمفعول به هما الشخص نفسه).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u59_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'They enjoyed themselves', 'استمتعوا بأنفسهم')">They enjoyed themselves</span>
+                    <span class="word" onclick="showWord(event, 'at the party.', 'في الحفلة.')">at the party.</span>
+                </div>
+            </div>
+            <div id="u59_2" class="translation-box">الترجمة: استمتعوا بوقتهم في الحفلة. (استخدام الضمير المنعكس نفسها مع الفاعل They).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Subject Pronoun</th>
+                        <th>Reflexive Pronoun (Singular)</th>
+                        <th>Reflexive Pronoun (Plural)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>I / You / He / She / It</td>
+                        <td>myself / yourself / himself / herself / itself</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>We / You / They</td>
+                        <td>-</td>
+                        <td>ourselves / yourselves / themselves</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 60 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 60: Kate's camera / my brother's car (Possessive 's)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u60_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'This is Kate\'s camera,', 'هذه كاميرا كيت،')">This is Kate's camera,</span>
+                    <span class="word" onclick="showWord(event, 'not mine.', 'وليست ملكي.')">not mine.</span>
+                </div>
+            </div>
+            <div id="u60_1" class="translation-box">الترجمة: هذه كاميرا كيت وليست كاميرتي. (استخدام 's الملكية مع الأشخاص والأسماء المفردة).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u60_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'My parents\' house', 'بيت والديّ')">My parents' house</span>
+                    <span class="word" onclick="showWord(event, 'is very big.', 'كبير جداً.')">is very big.</span>
+                </div>
+            </div>
+            <div id="u60_2" class="translation-box">الترجمة: بيت والديّ كبير جداً. (عند جمع الاسم المنتهي بـ s نضع الفاصلة العليا ' بعد الـ s فقط).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Rule / Structure</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Singular Noun</td>
+                        <td>Add <b>'s</b></td>
+                        <td>my <b>friend's</b> house (one friend)</td>
+                    </tr>
+                    <tr>
+                        <td>Plural Noun (ending in -s)</td>
+                        <td>Add <b>'</b> only</td>
+                        <td>my <b>friends'</b> house (more than one friend)</td>
+                    </tr>
+                    <tr>
+                        <td>Things / Non-living</td>
+                        <td>Use <b>of</b> (usually)</td>
+                        <td>the roof <b>of</b> the building (NOT the building's roof)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- شريط تنقل سفلي -->
+        <div class="nav-bar">
+            <a href="Part19.html" class="nav-btn">&rarr; السابق (الجزء 19)</a>
+            <span class="page-title">الجزء العشرون (Units 58 - 60)</span>
+            <a href="Part21.html" class="nav-btn">التالي (الجزء 21) &larr;</a>
+        </div>
+
+    </div>
+
+    <script>
+        function speakText(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                var msg = new SpeechSynthesisUtterance();
+                msg.text = text;
+                msg.lang = 'en-US';
+                msg.rate = 0.85;
+                window.speechSynthesis.speak(msg);
+            } else {
+                alert("متصفحك لا يدعم النطق الصوتي التلقائي.");
+            }
+        }
+
+        function showWord(e, en, ar) {
+            if (e && e.stopPropagation) {
+                e.stopPropagation();
+            } else {
+                window.event.cancelBubble = true;
+            }
+            
+            speakText(en);
+
+            var toast = document.getElementById("toast");
+            if (toast) {
+                toast.innerText = en + " : " + ar;
+                toast.className = "show";
+                setTimeout(function() {
+                    toast.className = toast.className.replace("show", "");
+                }, 2500);
+            }
+        }
+
+        function speakLine(elem) {
+            var text = elem.innerText || elem.textContent;
+            speakText(text);
+        }
+
+        function toggleTranslation(id) {
+            var box = document.getElementById(id);
+            if (box) {
+                box.style.display = (box.style.display === "block") ? "none" : "block";
+            }
+        }
+    </script>
+</body>
+</html>
+

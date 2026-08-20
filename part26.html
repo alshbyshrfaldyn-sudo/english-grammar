@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Grammar - الجزء السادس والعشرون (Units 76 - 78)</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--card-bg);
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .page-title {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .unit-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .unit-header {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .unit-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            direction: ltr;
+            text-align: left;
+            display: block;
+        }
+
+        .line-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+            direction: ltr;
+        }
+
+        .line-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+
+        .line-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .line-content {
+            font-size: 1.1rem;
+            direction: ltr;
+            text-align: left;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: background 0.2s;
+            width: 100%;
+        }
+
+        .line-content:hover {
+            background-color: #f0f7fc;
+        }
+
+        .word {
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 4px;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .word:hover {
+            background-color: #3498db;
+            color: #ffffff !important;
+        }
+
+        .translation-box {
+            display: none;
+            background-color: #f1f8fe;
+            border-right: 4px solid var(--accent-color);
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: #444;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .grammar-table th, .grammar-table td {
+            border: 1px solid #e1e8ed;
+            padding: 10px 12px;
+            font-size: 0.95rem;
+        }
+
+        .grammar-table th {
+            background-color: #f4f6f8;
+            color: var(--primary-color);
+        }
+
+        #toast {
+            visibility: hidden;
+            min-width: 220px;
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px 20px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.3s, fadeout 0.3s 2.2s;
+        }
+
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+
+    <div id="toast"></div>
+
+    <div class="container">
+
+        <!-- شريط تنقل علوي -->
+        <div class="nav-bar">
+            <a href="Part25.html" class="nav-btn">&rarr; السابق (الجزء 25)</a>
+            <span class="page-title">الجزء السادس والعشرون (Units 76 - 78)</span>
+            <a href="Part27.html" class="nav-btn">التالي (الجزء 27) &larr;</a>
+        </div>
+
+        <!-- Unit 76 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 76: older than... / more expensive than...</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u76_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Athens is older than', 'أثينا أقدم من')">Athens is older than</span>
+                    <span class="word" onclick="showWord(event, 'Rome.', 'روما.')">Rome.</span>
+                </div>
+            </div>
+            <div id="u76_1" class="translation-box">الترجمة: أثينا أقدم من روما. (مقارنة الصفات القصيرة باستخدام er + than).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u76_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Hotels are more expensive than', 'الفنادق أكثر كلفة من')">Hotels are more expensive than</span>
+                    <span class="word" onclick="showWord(event, 'apartments.', 'الشقوق السكنية.')">apartments.</span>
+                </div>
+            </div>
+            <div id="u76_2" class="translation-box">الترجمة: الفنادق أكثر كلفة من الشقق. (مقارنة الصفات الطويلة باستخدام more + adjective + than).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Adjective Type</th>
+                        <th>Comparison Form</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Short Adjectives</b></td>
+                        <td>Adjective + <b>er than</b></td>
+                        <td>Cheaper <b>than</b> / Bigger <b>than</b></td>
+                    </tr>
+                    <tr>
+                        <td><b>Long Adjectives</b></td>
+                        <td><b>more</b> + Adjective + <b>than</b></td>
+                        <td><b>More expensive than</b> / <b>More interesting than</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 77 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 77: not as... as</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u77_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Rome is not as old as', 'روما ليست أقدم من / ليست بنفس قدم')">Rome is not as old as</span>
+                    <span class="word" onclick="showWord(event, 'Athens.', 'أثينا.')">Athens.</span>
+                </div>
+            </div>
+            <div id="u77_1" class="translation-box">الترجمة: روما ليست بنفس قدم أثينا. (استخدام not as... as للتعبير عن عدم التساوي في المقارنة).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u77_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'The weather is not as cold', 'الطقس ليس بارداً')">The weather is not as cold</span>
+                    <span class="word" onclick="showWord(event, 'as yesterday.', 'كما كان بالأمس.')">as yesterday.</span>
+                </div>
+            </div>
+            <div id="u77_2" class="translation-box">الترجمة: الطقس ليس بارداً كما كان بالأمس.</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Structure</th>
+                        <th>Meaning</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>as... as</b></td>
+                        <td>مساواة (مثل / بنفس)</td>
+                        <td>I'm <b>as tall as</b> you.</td>
+                    </tr>
+                    <tr>
+                        <td><b>not as... as</b></td>
+                        <td>أقل من (ليس مثل)</td>
+                        <td>This car is <b>not as fast as</b> that one.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 78 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 78: the oldest / the most expensive</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u78_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Money is important,', 'المال مهم،')">Money is important,</span>
+                    <span class="word" onclick="showWord(event, 'but health is the most important thing.', 'لكن الصحة هي الشيء الأكثر أهمية.')">but health is the most important thing.</span>
+                </div>
+            </div>
+            <div id="u78_1" class="translation-box">الترجمة: المال مهم، لكن الصحة هي الشيء الأكثر أهمية. (صيغة التفضيل مع الصفات الطويلة the most + adj).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u78_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Yesterday was the hottest day', 'كان الأمس أشد الأيام حرارة')">Yesterday was the hottest day</span>
+                    <span class="word" onclick="showWord(event, 'of the year.', 'في السنة.')">of the year.</span>
+                </div>
+            </div>
+            <div id="u78_2" class="translation-box">الترجمة: كان الأمس أشد الأيام حرارة في السنة. (صيغة التفضيل مع الصفات القصيرة the + adj-est).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Adjective Class</th>
+                        <th>Superlative Form</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Short</b></td>
+                        <td><b>the</b> + Adjective + <b>est</b></td>
+                        <td><b>the oldest</b> / <b>the highest</b></td>
+                    </tr>
+                    <tr>
+                        <td><b>Long</b></td>
+                        <td><b>the most</b> + Adjective</td>
+                        <td><b>the most expensive</b> / <b>the most popular</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- شريط تنقل سفلي -->
+        <div class="nav-bar">
+            <a href="Part25.html" class="nav-btn">&rarr; السابق (الجزء 25)</a>
+            <span class="page-title">الجزء السادس والعشرون (Units 76 - 78)</span>
+            <a href="Part27.html" class="nav-btn">التالي (الجزء 27) &larr;</a>
+        </div>
+
+    </div>
+
+    <script>
+        function speakText(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                var msg = new SpeechSynthesisUtterance();
+                msg.text = text;
+                msg.lang = 'en-US';
+                msg.rate = 0.85;
+                window.speechSynthesis.speak(msg);
+            } else {
+                alert("متصفحك لا يدعم النطق الصوتي التلقائي.");
+            }
+        }
+
+        function showWord(e, en, ar) {
+            if (e && e.stopPropagation) {
+                e.stopPropagation();
+            } else {
+                window.event.cancelBubble = true;
+            }
+            
+            speakText(en);
+
+            var toast = document.getElementById("toast");
+            if (toast) {
+                toast.innerText = en + " : " + ar;
+                toast.className = "show";
+                setTimeout(function() {
+                    toast.className = toast.className.replace("show", "");
+                }, 2500);
+            }
+        }
+
+        function speakLine(elem) {
+            var text = elem.innerText || elem.textContent;
+            speakText(text);
+        }
+
+        function toggleTranslation(id) {
+            var box = document.getElementById(id);
+            if (box) {
+                box.style.display = (box.style.display === "block") ? "none" : "block";
+            }
+        }
+    </script>
+</body>
+</html>
+

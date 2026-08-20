@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Grammar - الجزء السادس (Units 16 - 18)</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--card-bg);
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .page-title {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .unit-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .unit-header {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .unit-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            direction: ltr;
+            text-align: left;
+            display: block;
+        }
+
+        .line-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+            direction: ltr;
+        }
+
+        .line-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+
+        .line-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .line-content {
+            font-size: 1.1rem;
+            direction: ltr;
+            text-align: left;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: background 0.2s;
+            width: 100%;
+        }
+
+        .line-content:hover {
+            background-color: #f0f7fc;
+        }
+
+        .word {
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 4px;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .word:hover {
+            background-color: #3498db;
+            color: #ffffff !important;
+        }
+
+        .translation-box {
+            display: none;
+            background-color: #f1f8fe;
+            border-right: 4px solid var(--accent-color);
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: #444;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .grammar-table th, .grammar-table td {
+            border: 1px solid #e1e8ed;
+            padding: 10px 12px;
+            font-size: 0.95rem;
+        }
+
+        .grammar-table th {
+            background-color: #f4f6f8;
+            color: var(--primary-color);
+        }
+
+        #toast {
+            visibility: hidden;
+            min-width: 220px;
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px 20px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.3s, fadeout 0.3s 2.2s;
+        }
+
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+
+    <div id="toast"></div>
+
+    <div class="container">
+
+        <!-- شريط تنقل علوي -->
+        <div class="nav-bar">
+            <a href="Part5.html" class="nav-btn">&rarr; السابق (الجزء 5)</a>
+            <span class="page-title">الجزء السادس (Units 16 - 18)</span>
+            <a href="Part7.html" class="nav-btn">التالي (الجزء 7) &larr;</a>
+        </div>
+
+        <!-- Unit 16 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 16: I've just... / I've already... / I haven't... yet</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u16_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'They have just', 'لقد قاموا للتو بـ')">They have just</span>
+                    <span class="word" onclick="showWord(event, 'arrived.', 'الوصول.')">arrived.</span>
+                </div>
+            </div>
+            <div id="u16_1" class="translation-box">الترجمة: لقد وصلوا للتو. (استخدام just للتعبير عن حدث وقع منذ لحظات قصيرة).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u16_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Has it stopped', 'هل توقفت')">Has it stopped</span>
+                    <span class="word" onclick="showWord(event, 'raining yet?', 'عن المطر بعد؟')">raining yet?</span>
+                </div>
+            </div>
+            <div id="u16_2" class="translation-box">الترجمة: هل توقفت عن المطر بعد؟ (تأتي yet في نهاية الأسئلة والنفي بمعنى "حتى الآن / بعد").</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Word</th>
+                        <th>Meaning</th>
+                        <th>Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>just</td>
+                        <td>a short time ago</td>
+                        <td>Between have/has & past participle</td>
+                    </tr>
+                    <tr>
+                        <td>already</td>
+                        <td>before expected</td>
+                        <td>Between have/has & past participle</td>
+                    </tr>
+                    <tr>
+                        <td>yet</td>
+                        <td>until now</td>
+                        <td>At the end of negative sentences / questions</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 17 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 17: Have you ever...? (Present Perfect 3)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u17_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Have you ever', 'هل سبق لك')">Have you ever</span>
+                    <span class="word" onclick="showWord(event, 'been to Rome?', 'أن زرت روما؟')">been to Rome?</span>
+                </div>
+            </div>
+            <div id="u17_1" class="translation-box">الترجمة: هل سبق لك أن زرت روما؟ (استخدام ever للسؤال عن الخبرات والتجارب في الحياة).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u17_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'I have never', 'لم أقم أبداً بـ')">I have never</span>
+                    <span class="word" onclick="showWord(event, 'ridden a horse.', 'ركوب حصان.')">ridden a horse.</span>
+                </div>
+            </div>
+            <div id="u17_2" class="translation-box">الترجمة: لم يسبق لي ركوب الخيل أبداً. (استخدام never لنفي التجارب السابقة).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Phrase</th>
+                        <th>Meaning</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Have you ever...?</td>
+                        <td>In your life until now?</td>
+                        <td>Have you ever eaten sushi?</td>
+                    </tr>
+                    <tr>
+                        <td>I have never...</td>
+                        <td>Not once in my life</td>
+                        <td>I've never played golf.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 18 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 18: How long have you...? (for / since)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u18_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'They have been', 'هم متواجدون')">They have been</span>
+                    <span class="word" onclick="showWord(event, 'here for', 'هنا لمدة')">here for</span>
+                    <span class="word" onclick="showWord(event, 'two hours.', 'ساعتين.')">two hours.</span>
+                </div>
+            </div>
+            <div id="u18_1" class="translation-box">الترجمة: هم متواجدون هنا منذ ساعتين / لمدة ساعتين. (استخدام for للتعبير عن مدة زمنية محددة).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u18_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'She has lived', 'هي تعيش')">She has lived</span>
+                    <span class="word" onclick="showWord(event, 'in London since', 'في لندن منذ')">in London since</span>
+                    <span class="word" onclick="showWord(event, '2020.', 'عام 2020.')">2020.</span>
+                </div>
+            </div>
+            <div id="u18_2" class="translation-box">الترجمة: هي تعيش في لندن منذ عام 2020. (استخدام since للتعبير عن نقطة بداية الحدث).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Preposition</th>
+                        <th>Used for</th>
+                        <th>Examples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>for</td>
+                        <td>a period of time</td>
+                        <td>for 3 days / for 5 years / for a long time</td>
+                    </tr>
+                    <tr>
+                        <td>since</td>
+                        <td>the start of a period</td>
+                        <td>since Monday / since 9 o'clock / since 2018</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- شريط تنقل سفلي -->
+        <div class="nav-bar">
+            <a href="Part5.html" class="nav-btn">&rarr; السابق (الجزء 5)</a>
+            <span class="page-title">الجزء السادس (Units 16 - 18)</span>
+            <a href="Part7.html" class="nav-btn">التالي (الجزء 7) &larr;</a>
+        </div>
+
+    </div>
+
+    <script>
+        function speakText(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                var msg = new SpeechSynthesisUtterance();
+                msg.text = text;
+                msg.lang = 'en-US';
+                msg.rate = 0.85;
+                window.speechSynthesis.speak(msg);
+            } else {
+                alert("متصفحك لا يدعم النطق الصوتي التلقائي.");
+            }
+        }
+
+        function showWord(e, en, ar) {
+            if (e && e.stopPropagation) {
+                e.stopPropagation();
+            } else {
+                window.event.cancelBubble = true;
+            }
+            
+            speakText(en);
+
+            var toast = document.getElementById("toast");
+            if (toast) {
+                toast.innerText = en + " : " + ar;
+                toast.className = "show";
+                setTimeout(function() {
+                    toast.className = toast.className.replace("show", "");
+                }, 2500);
+            }
+        }
+
+        function speakLine(elem) {
+            var text = elem.innerText || elem.textContent;
+            speakText(text);
+        }
+
+        function toggleTranslation(id) {
+            var box = document.getElementById(id);
+            if (box) {
+                box.style.display = (box.style.display === "block") ? "none" : "block";
+            }
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Grammar - الجزء الرابع (Units 10 - 12)</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--card-bg);
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .page-title {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .unit-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .unit-header {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .unit-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            direction: ltr;
+            text-align: left;
+            display: block;
+        }
+
+        .line-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+            direction: ltr;
+        }
+
+        .line-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+
+        .line-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .line-content {
+            font-size: 1.1rem;
+            direction: ltr;
+            text-align: left;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: background 0.2s;
+            width: 100%;
+        }
+
+        .line-content:hover {
+            background-color: #f0f7fc;
+        }
+
+        .word {
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 4px;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .word:hover {
+            background-color: #3498db;
+            color: #ffffff !important;
+        }
+
+        .translation-box {
+            display: none;
+            background-color: #f1f8fe;
+            border-right: 4px solid var(--accent-color);
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: #444;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .grammar-table th, .grammar-table td {
+            border: 1px solid #e1e8ed;
+            padding: 10px 12px;
+            font-size: 0.95rem;
+        }
+
+        .grammar-table th {
+            background-color: #f4f6f8;
+            color: var(--primary-color);
+        }
+
+        #toast {
+            visibility: hidden;
+            min-width: 220px;
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px 20px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.3s, fadeout 0.3s 2.2s;
+        }
+
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+
+    <div id="toast"></div>
+
+    <div class="container">
+
+        <!-- شريط تنقل علوي -->
+        <div class="nav-bar">
+            <a href="Part3.html" class="nav-btn">&rarr; السابق (الجزء 3)</a>
+            <span class="page-title">الجزء الرابع (Units 10 - 12)</span>
+            <a href="Part5.html" class="nav-btn">التالي (الجزء 5) &larr;</a>
+        </div>
+
+        <!-- Unit 10 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 10: was / were (Past Simple of 'be')</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u10_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Last year', 'العام الماضي')">Last year</span>
+                    <span class="word" onclick="showWord(event, 'Rachel was', 'كانت ريتشل')">Rachel was</span>
+                    <span class="word" onclick="showWord(event, '22.', '22 سنة.')">22.</span>
+                </div>
+            </div>
+            <div id="u10_1" class="translation-box">الترجمة: في العام الماضي، كان عمر ريتشل 22 سنة. (استخدام was للماضي المفرد).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u10_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'They were', 'كانوا')">They were</span>
+                    <span class="word" onclick="showWord(event, 'not at home', 'ليسوا في المنزل')">not at home</span>
+                    <span class="word" onclick="showWord(event, 'yesterday.', 'الأمس.')">yesterday.</span>
+                </div>
+            </div>
+            <div id="u10_2" class="translation-box">الترجمة: لم يكونوا في البيت يوم الأمس. (استخدام were/weren't للماضي مع الجمع).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Positive (Past)</th>
+                        <th>Negative (Past)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>I / He / She / It</td>
+                        <td>was</td>
+                        <td>wasn't (was not)</td>
+                    </tr>
+                    <tr>
+                        <td>We / You / They</td>
+                        <td>were</td>
+                        <td>weren't (were not)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 11 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 11: worked / got / went (Past Simple)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u11_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'I brushed', 'نظفت/فرشت')">I brushed</span>
+                    <span class="word" onclick="showWord(event, 'my teeth', 'أسناًني')">my teeth</span>
+                    <span class="word" onclick="showWord(event, 'this morning.', 'هذا الصباح.')">this morning.</span>
+                </div>
+            </div>
+            <div id="u11_1" class="translation-box">الترجمة: نظفت أسناني هذا الصباح. (فعل منتظم بإضافة ed للتعبير عن حدث منتهٍ).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u11_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Terry went', 'تيري ذهب')">Terry went</span>
+                    <span class="word" onclick="showWord(event, 'to work', 'إلى العمل')">to work</span>
+                    <span class="word" onclick="showWord(event, 'by car.', 'بالسيارة.')">by car.</span>
+                </div>
+            </div>
+            <div id="u11_2" class="translation-box">الترجمة: ذهب تيري إلى العمل بالسيارة. (استخدام التصريف الثاني للفاعل الشاذ went للماضي من go).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Verb Type</th>
+                        <th>Base Form</th>
+                        <th>Past Simple Form</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Regular Verbs</td>
+                        <td>work / clean / stay</td>
+                        <td>worked / cleaned / stayed</td>
+                    </tr>
+                    <tr>
+                        <td>Irregular Verbs</td>
+                        <td>see / go / buy</td>
+                        <td>saw / went / bought</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 12 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 12: I didn't... / Did you...? (Past Simple Negative & Questions)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u12_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'I didn\'t watch', 'لم أشاهد')">I didn't watch</span>
+                    <span class="word" onclick="showWord(event, 'television', 'التلفاز')">television</span>
+                    <span class="word" onclick="showWord(event, 'last night.', 'البارحة.')">last night.</span>
+                </div>
+            </div>
+            <div id="u12_1" class="translation-box">الترجمة: لم أشاهد التلفاز الليلة الماضية. (استخدام didn't للنفي في الماضي المتبوع بالمصدر).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u12_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Did you go', 'هل ذهبت')">Did you go</span>
+                    <span class="word" onclick="showWord(event, 'out last night?', 'للخارج الليلة الماضية؟')">out last night?</span>
+                </div>
+            </div>
+            <div id="u12_2" class="translation-box">الترجمة: هل خرجت الليلة الماضية؟ (استخدام Did للسؤال في الماضي ويرجع الفعل للمصدر go).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Sentence Type</th>
+                        <th>Structure</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Negative</td>
+                        <td>Subject + didn't + Base Verb</td>
+                        <td>They didn't come to the party.</td>
+                    </tr>
+                    <tr>
+                        <td>Question</td>
+                        <td>Did + Subject + Base Verb?</td>
+                        <td>Did it rain yesterday?</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- شريط تنقل سفلي -->
+        <div class="nav-bar">
+            <a href="Part3.html" class="nav-btn">&rarr; السابق (الجزء 3)</a>
+            <span class="page-title">الجزء الرابع (Units 10 - 12)</span>
+            <a href="Part5.html" class="nav-btn">التالي (الجزء 5) &larr;</a>
+        </div>
+
+    </div>
+
+    <script>
+        function speakText(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                var msg = new SpeechSynthesisUtterance();
+                msg.text = text;
+                msg.lang = 'en-US';
+                msg.rate = 0.85;
+                window.speechSynthesis.speak(msg);
+            } else {
+                alert("متصفحك لا يدعم النطق الصوتي التلقائي.");
+            }
+        }
+
+        function showWord(e, en, ar) {
+            if (e && e.stopPropagation) {
+                e.stopPropagation();
+            } else {
+                window.event.cancelBubble = true;
+            }
+            
+            speakText(en);
+
+            var toast = document.getElementById("toast");
+            if (toast) {
+                toast.innerText = en + " : " + ar;
+                toast.className = "show";
+                setTimeout(function() {
+                    toast.className = toast.className.replace("show", "");
+                }, 2500);
+            }
+        }
+
+        function speakLine(elem) {
+            var text = elem.innerText || elem.textContent;
+            speakText(text);
+        }
+
+        function toggleTranslation(id) {
+            var box = document.getElementById(id);
+            if (box) {
+                box.style.display = (box.style.display === "block") ? "none" : "block";
+            }
+        }
+    </script>
+</body>
+</html>
+

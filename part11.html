@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Grammar - الجزء الحادي عشر (Units 31 - 33)</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--card-bg);
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .page-title {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .unit-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .unit-header {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .unit-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            direction: ltr;
+            text-align: left;
+            display: block;
+        }
+
+        .line-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+            direction: ltr;
+        }
+
+        .line-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+
+        .line-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .line-content {
+            font-size: 1.1rem;
+            direction: ltr;
+            text-align: left;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: background 0.2s;
+            width: 100%;
+        }
+
+        .line-content:hover {
+            background-color: #f0f7fc;
+        }
+
+        .word {
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 4px;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .word:hover {
+            background-color: #3498db;
+            color: #ffffff !important;
+        }
+
+        .translation-box {
+            display: none;
+            background-color: #f1f8fe;
+            border-right: 4px solid var(--accent-color);
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: #444;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .grammar-table th, .grammar-table td {
+            border: 1px solid #e1e8ed;
+            padding: 10px 12px;
+            font-size: 0.95rem;
+        }
+
+        .grammar-table th {
+            background-color: #f4f6f8;
+            color: var(--primary-color);
+        }
+
+        #toast {
+            visibility: hidden;
+            min-width: 220px;
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px 20px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.3s, fadeout 0.3s 2.2s;
+        }
+
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+
+    <div id="toast"></div>
+
+    <div class="container">
+
+        <!-- شريط تنقل علوي -->
+        <div class="nav-bar">
+            <a href="Part10.html" class="nav-btn">&rarr; السابق (الجزء 10)</a>
+            <span class="page-title">الجزء الحادي عشر (Units 31 - 33)</span>
+            <a href="Part12.html" class="nav-btn">التالي (الجزء 12) &larr;</a>
+        </div>
+
+        <!-- Unit 31 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 31: must / mustn't / don't need to (Obligation and Necessity)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u31_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'You must be', 'يجب أن تكون')">You must be</span>
+                    <span class="word" onclick="showWord(event, 'careful.', 'حذراً.')">careful.</span>
+                </div>
+            </div>
+            <div id="u31_1" class="translation-box">الترجمة: يجب أن تكون حذراً. (استخدام must للتعبير عن إلزام أو ضرورة قوية).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u31_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'You mustn\'t touch', 'يُحظر عليك لمس')">You mustn't touch</span>
+                    <span class="word" onclick="showWord(event, 'this wire.', 'هذا السلك.')">this wire.</span>
+                </div>
+            </div>
+            <div id="u31_2" class="translation-box">الترجمة: يُحظر عليك لمس هذا السلك. (استخدام mustn't للتعبير عن المنع أو النهي القاطع).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Modal Form</th>
+                        <th>Meaning / Rule</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>must + Base Verb</td>
+                        <td>It is necessary / obligatory</td>
+                        <td>I must study tonight.</td>
+                    </tr>
+                    <tr>
+                        <td>mustn't + Base Verb</td>
+                        <td>Do NOT do it (Forbidden)</td>
+                        <td>You mustn't speak during the exam.</td>
+                    </tr>
+                    <tr>
+                        <td>don't need to + Base Verb</td>
+                        <td>It is NOT necessary</td>
+                        <td>You don't need to go yet.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 32 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 32: should (Advice and Opinion)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u32_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'You should go', 'ينبغي عليك الذهاب')">You should go</span>
+                    <span class="word" onclick="showWord(event, 'to bed early.', 'إلى النوم مبكراً.')">to bed early.</span>
+                </div>
+            </div>
+            <div id="u32_1" class="translation-box">الترجمة: ينبغي عليك الذهاب للنوم مبكراً. (إسداء نصيحة شخصية بـ should).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u32_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'I don\'t think', 'لا أعتقد')">I don't think</span>
+                    <span class="word" onclick="showWord(event, 'you should work', 'أنه ينبغي عليك العمل')">you should work</span>
+                    <span class="word" onclick="showWord(event, 'so hard.', 'بجديّة مفرطة.')">so hard.</span>
+                </div>
+            </div>
+            <div id="u32_2" class="translation-box">الترجمة: لا أعتقد أنه ينبغي عليك العمل بجدية مفرطة. (التعبير عن الرأي والتوجيه).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Usage</th>
+                        <th>Structure</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Giving Advice (Good idea)</td>
+                        <td>Subject + should + Base Verb</td>
+                        <td>You should eat more fruit.</td>
+                    </tr>
+                    <tr>
+                        <td>Advising Against (Bad idea)</td>
+                        <td>Subject + shouldn't + Base Verb</td>
+                        <td>You shouldn't watch too much TV.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 33 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 33: have to... (External Obligation)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u33_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'I have to wear', 'يتوجب عليّ ارتداء')">I have to wear</span>
+                    <span class="word" onclick="showWord(event, 'glasses for reading.', 'النظارات للقراءة.')">glasses for reading.</span>
+                </div>
+            </div>
+            <div id="u33_1" class="translation-box">الترجمة: يتوجب عليّ ارتداء النظارات للقراءة. (إلزام خارجي أو فرض مفروض على الشخص).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u33_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'She had to work', 'كان يتوجب عليها العمل')">She had to work</span>
+                    <span class="word" onclick="showWord(event, 'late yesterday.', 'لوقت متأخر بالأمس.')">late yesterday.</span>
+                </div>
+            </div>
+            <div id="u33_2" class="translation-box">الترجمة: كان يتوجب عليها العمل لوقت متأخر بالأمس. (الإلزام في الماضي بـ had to).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Structure</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Present Obligation</td>
+                        <td>have to / has to + Base Verb</td>
+                        <td>He has to start work at 8:00.</td>
+                    </tr>
+                    <tr>
+                        <td>Past Obligation</td>
+                        <td>had to + Base Verb</td>
+                        <td>We had to take a taxi home.</td>
+                    </tr>
+                    <tr>
+                        <td>No Obligation</td>
+                        <td>don't / doesn't have to</td>
+                        <td>I don't have to get up early tomorrow.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- شريط تنقل سفلي -->
+        <div class="nav-bar">
+            <a href="Part10.html" class="nav-btn">&rarr; السابق (الجزء 10)</a>
+            <span class="page-title">الجزء الحادي عشر (Units 31 - 33)</span>
+            <a href="Part12.html" class="nav-btn">التالي (الجزء 12) &larr;</a>
+        </div>
+
+    </div>
+
+    <script>
+        function speakText(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                var msg = new SpeechSynthesisUtterance();
+                msg.text = text;
+                msg.lang = 'en-US';
+                msg.rate = 0.85;
+                window.speechSynthesis.speak(msg);
+            } else {
+                alert("متصفحك لا يدعم النطق الصوتي التلقائي.");
+            }
+        }
+
+        function showWord(e, en, ar) {
+            if (e && e.stopPropagation) {
+                e.stopPropagation();
+            } else {
+                window.event.cancelBubble = true;
+            }
+            
+            speakText(en);
+
+            var toast = document.getElementById("toast");
+            if (toast) {
+                toast.innerText = en + " : " + ar;
+                toast.className = "show";
+                setTimeout(function() {
+                    toast.className = toast.className.replace("show", "");
+                }, 2500);
+            }
+        }
+
+        function speakLine(elem) {
+            var text = elem.innerText || elem.textContent;
+            speakText(text);
+        }
+
+        function toggleTranslation(id) {
+            var box = document.getElementById(id);
+            if (box) {
+                box.style.display = (box.style.display === "block") ? "none" : "block";
+            }
+        }
+    </script>
+</body>
+</html>
+

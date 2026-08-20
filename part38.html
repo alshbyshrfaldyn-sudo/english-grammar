@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Grammar - الجزء الثامن والثلاثون (Units 112 - 114)</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--card-bg);
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .page-title {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .unit-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .unit-header {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .unit-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            direction: ltr;
+            text-align: left;
+            display: block;
+        }
+
+        .line-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+            direction: ltr;
+        }
+
+        .line-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+
+        .line-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .line-content {
+            font-size: 1.1rem;
+            direction: ltr;
+            text-align: left;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: background 0.2s;
+            width: 100%;
+        }
+
+        .line-content:hover {
+            background-color: #f0f7fc;
+        }
+
+        .word {
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 4px;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .word:hover {
+            background-color: #3498db;
+            color: #ffffff !important;
+        }
+
+        .translation-box {
+            display: none;
+            background-color: #f1f8fe;
+            border-right: 4px solid var(--accent-color);
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: #444;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .grammar-table th, .grammar-table td {
+            border: 1px solid #e1e8ed;
+            padding: 10px 12px;
+            font-size: 0.95rem;
+        }
+
+        .grammar-table th {
+            background-color: #f4f6f8;
+            color: var(--primary-color);
+        }
+
+        #toast {
+            visibility: hidden;
+            min-width: 220px;
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px 20px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.3s, fadeout 0.3s 2.2s;
+        }
+
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+
+    <div id="toast"></div>
+
+    <div class="container">
+
+        <!-- شريط تنقل علوي -->
+        <div class="nav-bar">
+            <a href="Part37.html" class="nav-btn">&rarr; السابق (الجزء 37)</a>
+            <span class="page-title">الجزء الثامن والثلاثون (Units 112 - 114)</span>
+            <a href="Part39.html" class="nav-btn">التالي (الجزء 39) &larr;</a>
+        </div>
+
+        <!-- Unit 112 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 112: More Adjectives + Prepositions (proud of, famous for, etc.)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u112_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'He is proud of', 'إنه فخور بـ')">He is proud of</span>
+                    <span class="word" onclick="showWord(event, 'his academic achievements.', 'إنجازاته الأكاديمية.')">his academic achievements.</span>
+                </div>
+            </div>
+            <div id="u112_1" class="translation-box">الترجمة: إنه فخور بإنجازاته الأكاديمية. (proud يأتي معها حرف الجر of).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u112_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Yemen is famous for', 'اليمن مشهور بـ')">Yemen is famous for</span>
+                    <span class="word" onclick="showWord(event, 'its coffee and history.', 'بقهوته وتاريخه.')">its coffee and history.</span>
+                </div>
+            </div>
+            <div id="u112_2" class="translation-box">الترجمة: اليمن مشهور بقهوته وتاريخه. (famous يأتي معها حرف الجر for).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Adjective + Preposition</th>
+                        <th>Meaning</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>proud of</b></td>
+                        <td>فخور بـ</td>
+                        <td>They are <b>proud of</b> their team.</td>
+                    </tr>
+                    <tr>
+                        <td><b>famous for</b></td>
+                        <td>مشهور بـ</td>
+                        <td>The city is <b>famous for</b> its architecture.</td>
+                    </tr>
+                    <tr>
+                        <td><b>full of</b></td>
+                        <td>مليء بـ</td>
+                        <td>The room was <b>full of</b> people.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 113 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 113: Verbs + Prepositions Part 2 (depend on, belong to, etc.)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u113_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'It depends on', 'يعتمد ذلك على')">It depends on</span>
+                    <span class="word" onclick="showWord(event, 'the weather conditions.', 'الظروف الجوية.')">the weather conditions.</span>
+                </div>
+            </div>
+            <div id="u113_1" class="translation-box">الترجمة: يعتمد ذلك على الظروف الجوية. (depend يأتي معها on).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u113_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Does this book', 'هل ينتمي هذا الكتاب')">Does this book</span>
+                    <span class="word" onclick="showWord(event, 'belong to you?', 'إليك؟ (هل هو لك؟)')">belong to you?</span>
+                </div>
+            </div>
+            <div id="u113_2" class="translation-box">الترجمة: هل ينتمي هذا الكتاب إليك؟ (belong يأتي معها to).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Verb + Preposition</th>
+                        <th>Meaning</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>depend on</b></td>
+                        <td>يعتمد على</td>
+                        <td>Our plans <b>depend on</b> the weather.</td>
+                    </tr>
+                    <tr>
+                        <td><b>belong to</b></td>
+                        <td>ينتمي إلى / يخص</td>
+                        <td>This car <b>belongs to</b> my brother.</td>
+                    </tr>
+                    <tr>
+                        <td><b>think about / of</b></td>
+                        <td>يفكر في / يعطي رأياً بـ</td>
+                        <td>What do you <b>think of</b> this idea?</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 114 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 114: Complex Prepositions (because of, instead of, in front of)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u114_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'We stayed indoors', 'بقينا في الداخل')">We stayed indoors</span>
+                    <span class="word" onclick="showWord(event, 'because of the heavy rain.', 'بسبب المطر الغزير.')">because of the heavy rain.</span>
+                </div>
+            </div>
+            <div id="u114_1" class="translation-box">الترجمة: بقينا في الداخل بسبب المطر الغزير. (because of يأتي بعدها اسم أو اسم مجرور).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u114_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'He took tea', 'أخذ شاي')">He took tea</span>
+                    <span class="word" onclick="showWord(event, 'instead of coffee.', 'بدلاً من القهوة.')">instead of coffee.</span>
+                </div>
+            </div>
+            <div id="u114_2" class="translation-box">الترجمة: أخذ شاي بدلاً من القهوة.</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Compound Preposition</th>
+                        <th>Meaning</th>
+                        <th>Example Sentence</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>because of</b></td>
+                        <td>بسبب</td>
+                        <td>The flight was delayed <b>because of</b> fog.</td>
+                    </tr>
+                    <tr>
+                        <td><b>instead of</b></td>
+                        <td>بدلاً من</td>
+                        <td>I will use Python <b>instead of</b> PHP.</td>
+                    </tr>
+                    <tr>
+                        <td><b>in front of / behind</b></td>
+                        <td>أمام / خلف</td>
+                        <td>Park your car <b>in front of</b> the house.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- شريط تنقل سفلي -->
+        <div class="nav-bar">
+            <a href="Part37.html" class="nav-btn">&rarr; السابق (الجزء 37)</a>
+            <span class="page-title">الجزء الثامن والثلاثون (Units 112 - 114)</span>
+            <a href="Part39.html" class="nav-btn">التالي (الجزء 39) &larr;</a>
+        </div>
+
+    </div>
+
+    <script>
+        function speakText(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                var msg = new SpeechSynthesisUtterance();
+                msg.text = text;
+                msg.lang = 'en-US';
+                msg.rate = 0.85;
+                window.speechSynthesis.speak(msg);
+            } else {
+                alert("متصفحك لا يدعم النطق الصوتي التلقائي.");
+            }
+        }
+
+        function showWord(e, en, ar) {
+            if (e && e.stopPropagation) {
+                e.stopPropagation();
+            } else {
+                window.event.cancelBubble = true;
+            }
+            
+            speakText(en);
+
+            var toast = document.getElementById("toast");
+            if (toast) {
+                toast.innerText = en + " : " + ar;
+                toast.className = "show";
+                setTimeout(function() {
+                    toast.className = toast.className.replace("show", "");
+                }, 2500);
+            }
+        }
+
+        function speakLine(elem) {
+            var text = elem.innerText || elem.textContent;
+            speakText(text);
+        }
+
+        function toggleTranslation(id) {
+            var box = document.getElementById(id);
+            if (box) {
+                box.style.display = (box.style.display === "block") ? "none" : "block";
+            }
+        }
+    </script>
+</body>
+</html>
+

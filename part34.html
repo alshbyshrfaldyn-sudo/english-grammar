@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Grammar - الجزء الرابع والثلاثون (Units 100 - 102)</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--card-bg);
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .page-title {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .unit-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .unit-header {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .unit-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            direction: ltr;
+            text-align: left;
+            display: block;
+        }
+
+        .line-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+            direction: ltr;
+        }
+
+        .line-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+
+        .line-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .line-content {
+            font-size: 1.1rem;
+            direction: ltr;
+            text-align: left;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: background 0.2s;
+            width: 100%;
+        }
+
+        .line-content:hover {
+            background-color: #f0f7fc;
+        }
+
+        .word {
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 4px;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .word:hover {
+            background-color: #3498db;
+            color: #ffffff !important;
+        }
+
+        .translation-box {
+            display: none;
+            background-color: #f1f8fe;
+            border-right: 4px solid var(--accent-color);
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: #444;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .grammar-table th, .grammar-table td {
+            border: 1px solid #e1e8ed;
+            padding: 10px 12px;
+            font-size: 0.95rem;
+        }
+
+        .grammar-table th {
+            background-color: #f4f6f8;
+            color: var(--primary-color);
+        }
+
+        #toast {
+            visibility: hidden;
+            min-width: 220px;
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px 20px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.3s, fadeout 0.3s 2.2s;
+        }
+
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+
+    <div id="toast"></div>
+
+    <div class="container">
+
+        <!-- شريط تنقل علوي -->
+        <div class="nav-bar">
+            <a href="Part33.html" class="nav-btn">&rarr; السابق (الجزء 33)</a>
+            <span class="page-title">الجزء الرابع والثلاثون (Units 100 - 102)</span>
+            <a href="Part35.html" class="nav-btn">التالي (الجزء 35) &larr;</a>
+        </div>
+
+        <!-- Unit 100 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 100: Relative Clauses 2 (Omission of who/which/that)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u100_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'The woman I met yesterday', 'المرأة التي قابلتها يوم أمس')">The woman I met yesterday</span>
+                    <span class="word" onclick="showWord(event, 'was very friendly.', 'كانت لطيفة جداً.')">was very friendly.</span>
+                </div>
+            </div>
+            <div id="u100_1" class="translation-box">الترجمة: المرأة التي قابلتها يوم أمس كانت لطيفة جداً. (يمكن حذف who/that عندما تكون مفعولاً به في الجملة).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u100_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Did you find the keys', 'هل وجدت المفاتيح')">Did you find the keys</span>
+                    <span class="word" onclick="showWord(event, 'you lost?', 'التي فقدتها؟')">you lost?</span>
+                </div>
+            </div>
+            <div id="u100_2" class="translation-box">الترجمة: هل وجدت المفاتيح التي فقدتها؟ (أصل الجملة: the keys that you lost).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>With Relative Pronoun</th>
+                        <th>Without Relative Pronoun (Omitted)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>The film <b>that</b> I watched was good.</td>
+                        <td>The film <b>I watched</b> was good.</td>
+                    </tr>
+                    <tr>
+                        <td>The man <b>who</b> she knows is a doctor.</td>
+                        <td>The man <b>she knows</b> is a doctor.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 101 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 101: Relative Clauses with Prepositions (the hotel we stayed at)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u101_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'This is the hotel', 'هذا هو الفندق')">This is the hotel</span>
+                    <span class="word" onclick="showWord(event, 'we stayed at.', 'الذي أقمنا فيه.')">we stayed at.</span>
+                </div>
+            </div>
+            <div id="u101_1" class="translation-box">الترجمة: هذا هو الفندق الذي أقمنا فيه. (حرف الجر at يأتي غالباً في نهاية الجملة الموصولة).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u101_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'The girl I was talking to', 'الفتاة التي كنت أتحدث إليها')">The girl I was talking to</span>
+                    <span class="word" onclick="showWord(event, 'is my cousin.', 'هي ابنة عمي.')">is my cousin.</span>
+                </div>
+            </div>
+            <div id="u101_2" class="translation-box">الترجمة: الفتاة التي كنت أتحدث إليها هي ابنة عمي.</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Structure</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Noun + (that/who) + Subject + Verb + Preposition</b></td>
+                        <td>The job <b>she applied for</b>.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Noun + (which/that) + Subject + Verb + Preposition</b></td>
+                        <td>The music <b>you are listening to</b>.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 102 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 102: Review of Linking Words & Clauses</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u102_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Although it was cold,', 'على الرغم من أنها كانت باردة،')">Although it was cold,</span>
+                    <span class="word" onclick="showWord(event, 'we went for a walk.', 'قمنا بمسيرة لمسافة قصيرة.')">we went for a walk.</span>
+                </div>
+            </div>
+            <div id="u102_1" class="translation-box">الترجمة: على الرغم من أنها كانت باردة، ذهبنا للمشي. (استخدام although للتناقض).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u102_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'In spite of the rain,', 'بالرغم من المطر،')">In spite of the rain,</span>
+                    <span class="word" onclick="showWord(event, 'they enjoyed the game.', 'استمتعوا بالمباراة.')">they enjoyed the game.</span>
+                </div>
+            </div>
+            <div id="u102_2" class="translation-box">الترجمة: بالرغم من المطر، استمتعوا بالمباراة. (in spite of يأتي بعدها اسم أو Verb-ing).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Contrast Linker</th>
+                        <th>Followed by</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>although / even though</b></td>
+                        <td>Subject + Verb (جملة فعلية)</td>
+                        <td><b>Although</b> he studied hard, he failed.</td>
+                    </tr>
+                    <tr>
+                        <td><b>in spite of / despite</b></td>
+                        <td>Noun / Verb-ing (اسم)</td>
+                        <td><b>In spite of</b> studying hard, he failed.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- شريط تنقل سفلي -->
+        <div class="nav-bar">
+            <a href="Part33.html" class="nav-btn">&rarr; السابق (الجزء 33)</a>
+            <span class="page-title">الجزء الرابع والثلاثون (Units 100 - 102)</span>
+            <a href="Part35.html" class="nav-btn">التالي (الجزء 35) &larr;</a>
+        </div>
+
+    </div>
+
+    <script>
+        function speakText(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                var msg = new SpeechSynthesisUtterance();
+                msg.text = text;
+                msg.lang = 'en-US';
+                msg.rate = 0.85;
+                window.speechSynthesis.speak(msg);
+            } else {
+                alert("متصفحك لا يدعم النطق الصوتي التلقائي.");
+            }
+        }
+
+        function showWord(e, en, ar) {
+            if (e && e.stopPropagation) {
+                e.stopPropagation();
+            } else {
+                window.event.cancelBubble = true;
+            }
+            
+            speakText(en);
+
+            var toast = document.getElementById("toast");
+            if (toast) {
+                toast.innerText = en + " : " + ar;
+                toast.className = "show";
+                setTimeout(function() {
+                    toast.className = toast.className.replace("show", "");
+                }, 2500);
+            }
+        }
+
+        function speakLine(elem) {
+            var text = elem.innerText || elem.textContent;
+            speakText(text);
+        }
+
+        function toggleTranslation(id) {
+            var box = document.getElementById(id);
+            if (box) {
+                box.style.display = (box.style.display === "block") ? "none" : "block";
+            }
+        }
+    </script>
+</body>
+</html>
+

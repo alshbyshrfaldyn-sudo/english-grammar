@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Grammar - الجزء الثلاثون (Units 88 - 90)</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--card-bg);
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .page-title {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .unit-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .unit-header {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .unit-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            direction: ltr;
+            text-align: left;
+            display: block;
+        }
+
+        .line-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+            direction: ltr;
+        }
+
+        .line-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+
+        .line-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .line-content {
+            font-size: 1.1rem;
+            direction: ltr;
+            text-align: left;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: background 0.2s;
+            width: 100%;
+        }
+
+        .line-content:hover {
+            background-color: #f0f7fc;
+        }
+
+        .word {
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 4px;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .word:hover {
+            background-color: #3498db;
+            color: #ffffff !important;
+        }
+
+        .translation-box {
+            display: none;
+            background-color: #f1f8fe;
+            border-right: 4px solid var(--accent-color);
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: #444;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .grammar-table th, .grammar-table td {
+            border: 1px solid #e1e8ed;
+            padding: 10px 12px;
+            font-size: 0.95rem;
+        }
+
+        .grammar-table th {
+            background-color: #f4f6f8;
+            color: var(--primary-color);
+        }
+
+        #toast {
+            visibility: hidden;
+            min-width: 220px;
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px 20px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.3s, fadeout 0.3s 2.2s;
+        }
+
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+
+    <div id="toast"></div>
+
+    <div class="container">
+
+        <!-- شريط تنقل علوي -->
+        <div class="nav-bar">
+            <a href="Part29.html" class="nav-btn">&rarr; السابق (الجزء 29)</a>
+            <span class="page-title">الجزء الثلاثون (Units 88 - 90)</span>
+            <a href="Part31.html" class="nav-btn">التالي (الجزء 31) &larr;</a>
+        </div>
+
+        <!-- Unit 88 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 88: in / at / on (Position 2)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u88_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'He is in bed', 'هو في الفراش')">He is in bed</span>
+                    <span class="word" onclick="showWord(event, 'and she is at school.', 'وهي في المدرسة.')">and she is at school.</span>
+                </div>
+            </div>
+            <div id="u88_1" class="translation-box">الترجمة: هو في الفراش وهي في المدرسة. (استخدامات خاصة لحروف الجر المكانية مثل in bed, at school, at home).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u88_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'I live on the second floor', 'أنا أعيش في الطابق الثاني')">I live on the second floor</span>
+                    <span class="word" onclick="showWord(event, 'of this building.', 'من هذا المبنى.')">of this building.</span>
+                </div>
+            </div>
+            <div id="u88_2" class="translation-box">الترجمة: أنا أعيش في الطابق الثاني من هذا المبنى. (استخدام on مع الطوابق والوسائط).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Preposition</th>
+                        <th>Common Expressions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>in</b></td>
+                        <td><b>in</b> hospital, <b>in</b> prison, <b>in</b> bed, <b>in</b> the sky, <b>in</b> a newspaper</td>
+                    </tr>
+                    <tr>
+                        <td><b>at</b></td>
+                        <td><b>at</b> home, <b>at</b> work, <b>at</b> school, <b>at</b> university, <b>at</b> the station</td>
+                    </tr>
+                    <tr>
+                        <td><b>on</b></td>
+                        <td><b>on</b> the left/right, <b>on</b> the ground floor, <b>on</b> a bus/train/plane</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 89 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 89: to / in / at (Movement and Location)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u89_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'We are going to London', 'نحن ذاهبون إلى لندن')">We are going to London</span>
+                    <span class="word" onclick="showWord(event, 'next week.', 'الأسبوع القادم.')">next week.</span>
+                </div>
+            </div>
+            <div id="u89_1" class="translation-box">الترجمة: نحن ذاهبون إلى لندن الأسبوع القادم. (استخدام to يعبر عن الحركة باتجاه مكان معين).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u89_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Welcome to Yemen!', 'مرحباً بكم في اليمن!')">Welcome to Yemen!</span>
+                    <span class="word" onclick="showWord(event, 'We arrived in Sana\'a yesterday.', 'وصلنا إلى صنعاء يوم أمس.')">We arrived in Sana'a yesterday.</span>
+                </div>
+            </div>
+            <div id="u89_2" class="translation-box">الترجمة: مرحباً بكم في اليمن! وصلنا إلى صنعاء يوم أمس. (نقول arrive in للمدن/الدول و arrive at للأماكن والمباني).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Context</th>
+                        <th>Preposition</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Movement (حركة)</b></td>
+                        <td><b>to</b></td>
+                        <td>go <b>to</b> France, drive <b>to</b> work, return <b>to</b> hotel</td>
+                    </tr>
+                    <tr>
+                        <td><b>Home (منزل)</b></td>
+                        <td><b>go home</b> (بدون to)</td>
+                        <td>I am going <b>home</b> now. (NOT to home)</td>
+                    </tr>
+                    <tr>
+                        <td><b>Arrival (وصول)</b></td>
+                        <td><b>arrive in / at</b></td>
+                        <td>arrive <b>in</b> a city/country | arrive <b>at</b> the airport</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 90 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 90: under, over, through, etc. (Prepositions of Movement & Place)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u90_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'The cat walked under the table', 'مشت القطة تحت الطاولة')">The cat walked under the table</span>
+                    <span class="word" onclick="showWord(event, 'and out of the room.', 'وإلى خارج الغرفة.')">and out of the room.</span>
+                </div>
+            </div>
+            <div id="u90_1" class="translation-box">الترجمة: مشت القطة تحت الطاولة وإلى خارج الغرفة.</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u90_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'They drove through the tunnel', 'قادوا السيارة عبر النفق')">They drove through the tunnel</span>
+                    <span class="word" onclick="showWord(event, 'and over the bridge.', 'وفوق الجسر.')">and over the bridge.</span>
+                </div>
+            </div>
+            <div id="u90_2" class="translation-box">الترجمة: قادوا السيارة عبر النفق وفوق الجسر.</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Preposition</th>
+                        <th>Meaning</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>under / over</b></td>
+                        <td>تحت / فوق (تغطية أو حركة)</td>
+                        <td>The plane flew <b>over</b> the city.</td>
+                    </tr>
+                    <tr>
+                        <td><b>into / out of</b></td>
+                        <td>إلى داخل / إلى خارج</td>
+                        <td>He got <b>into</b> the car and drove off.</td>
+                    </tr>
+                    <tr>
+                        <td><b>through / along</b></td>
+                        <td>عبر (مجسم/ممر) / محاذاة (خط)</td>
+                        <td>Walk <b>along</b> the street and <b>through</b> the park.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- شريط تنقل سفلي -->
+        <div class="nav-bar">
+            <a href="Part29.html" class="nav-btn">&rarr; السابق (الجزء 29)</a>
+            <span class="page-title">الجزء الثلاثون (Units 88 - 90)</span>
+            <a href="Part31.html" class="nav-btn">التالي (الجزء 31) &larr;</a>
+        </div>
+
+    </div>
+
+    <script>
+        function speakText(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                var msg = new SpeechSynthesisUtterance();
+                msg.text = text;
+                msg.lang = 'en-US';
+                msg.rate = 0.85;
+                window.speechSynthesis.speak(msg);
+            } else {
+                alert("متصفحك لا يدعم النطق الصوتي التلقائي.");
+            }
+        }
+
+        function showWord(e, en, ar) {
+            if (e && e.stopPropagation) {
+                e.stopPropagation();
+            } else {
+                window.event.cancelBubble = true;
+            }
+            
+            speakText(en);
+
+            var toast = document.getElementById("toast");
+            if (toast) {
+                toast.innerText = en + " : " + ar;
+                toast.className = "show";
+                setTimeout(function() {
+                    toast.className = toast.className.replace("show", "");
+                }, 2500);
+            }
+        }
+
+        function speakLine(elem) {
+            var text = elem.innerText || elem.textContent;
+            speakText(text);
+        }
+
+        function toggleTranslation(id) {
+            var box = document.getElementById(id);
+            if (box) {
+                box.style.display = (box.style.display === "block") ? "none" : "block";
+            }
+        }
+    </script>
+</body>
+</html>
+

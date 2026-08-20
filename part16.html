@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Grammar - الجزء السادس عشر (Units 46 - 48)</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--card-bg);
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .page-title {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .unit-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .unit-header {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .unit-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            direction: ltr;
+            text-align: left;
+            display: block;
+        }
+
+        .line-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+            direction: ltr;
+        }
+
+        .line-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+
+        .line-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .line-content {
+            font-size: 1.1rem;
+            direction: ltr;
+            text-align: left;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: background 0.2s;
+            width: 100%;
+        }
+
+        .line-content:hover {
+            background-color: #f0f7fc;
+        }
+
+        .word {
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 4px;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .word:hover {
+            background-color: #3498db;
+            color: #ffffff !important;
+        }
+
+        .translation-box {
+            display: none;
+            background-color: #f1f8fe;
+            border-right: 4px solid var(--accent-color);
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: #444;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .grammar-table th, .grammar-table td {
+            border: 1px solid #e1e8ed;
+            padding: 10px 12px;
+            font-size: 0.95rem;
+        }
+
+        .grammar-table th {
+            background-color: #f4f6f8;
+            color: var(--primary-color);
+        }
+
+        #toast {
+            visibility: hidden;
+            min-width: 220px;
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px 20px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.3s, fadeout 0.3s 2.2s;
+        }
+
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+
+    <div id="toast"></div>
+
+    <div class="container">
+
+        <!-- شريط تنقل علوي -->
+        <div class="nav-bar">
+            <a href="Part15.html" class="nav-btn">&rarr; السابق (الجزء 15)</a>
+            <span class="page-title">الجزء السادس عشر (Units 46 - 48)</span>
+            <a href="Part17.html" class="nav-btn">التالي (الجزء 17) &larr;</a>
+        </div>
+
+        <!-- Unit 46 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 46: Questions Part 4 (What...? / Which...? / How...?)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u46_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Which bus', 'أي حافلة')">Which bus</span>
+                    <span class="word" onclick="showWord(event, 'goes to the city center?', 'تذهب إلى مركز المدينة؟')">goes to the city center?</span>
+                </div>
+            </div>
+            <div id="u46_1" class="translation-box">الترجمة: أي حافلة تذهب إلى مركز المدينة؟ (استخدام Which للاختيار بين خيارات محدودة).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u46_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'How long', 'كم الاستغراق الزمني')">How long</span>
+                    <span class="word" onclick="showWord(event, 'does it take to fly to London?', 'الذي يستغرقه الطيران إلى لندن؟')">does it take to fly to London?</span>
+                </div>
+            </div>
+            <div id="u46_2" class="translation-box">الترجمة: كم تستغرق الرحلة الجوية إلى لندن؟ (استخدام تركيبات How + adjective).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Word</th>
+                        <th>Usage Focus</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>What + Noun</td>
+                        <td>General choice / information</td>
+                        <td><b>What color</b> is your car?</td>
+                    </tr>
+                    <tr>
+                        <td>Which + Noun</td>
+                        <td>Limited choice (this or that)</td>
+                        <td><b>Which way</b> shall we go?</td>
+                    </tr>
+                    <tr>
+                        <td>How + Adj/Adv</td>
+                        <td>Degree / Measure / Manner</td>
+                        <td><b>How far</b> is the hotel?</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 47 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 47: Indirect Questions (How long does it take...? / Do you know where...?)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u47_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Do you know', 'هل تعرف')">Do you know</span>
+                    <span class="word" onclick="showWord(event, 'where Paula is?', 'أين تكون بولا؟')">where Paula is?</span>
+                </div>
+            </div>
+            <div id="u47_1" class="translation-box">الترجمة: هل تعرف أين بولا؟ (في السؤال غير المباشر نعود للترتيب الطبيعي: الفاعل ثم الفعل).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u47_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Can you tell me', 'هل يمكنك إخباري')">Can you tell me</span>
+                    <span class="word" onclick="showWord(event, 'what time the train leaves?', 'في أي وقت يغادر القطار؟')">what time the train leaves?</span>
+                </div>
+            </div>
+            <div id="u47_2" class="translation-box">الترجمة: هل يمكنك إخباري في أي وقت يغادر القطار؟ (عدم استخدام do/does/did في الجزء الثانوي).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Direct Question</th>
+                        <th>Indirect Question Structure</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Where <b>is the bank</b>?</td>
+                        <td>Do you know where <b>the bank is</b>?</td>
+                    </tr>
+                    <tr>
+                        <td>What time <b>does the film start</b>?</td>
+                        <td>Do you know what time <b>the film starts</b>?</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 48 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 48: Reported Speech (She said that... / He told me that...)</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u48_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Paul said that', 'قال بول إن')">Paul said that</span>
+                    <span class="word" onclick="showWord(event, 'he was feeling tired.', 'شعوره كان متعباً.')">he was feeling tired.</span>
+                </div>
+            </div>
+            <div id="u48_1" class="translation-box">الترجمة: قال بول إنه كان يشعر بالتعب. (تحويل زمن المضارع إلى الماضي في الكلام المنقول).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u48_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'She told me', 'أخبرتني')">She told me</span>
+                    <span class="word" onclick="showWord(event, 'that she didn\'t have a car.', 'أنها لا تملك سيارة.')">that she didn't have a car.</span>
+                </div>
+            </div>
+            <div id="u48_2" class="translation-box">الترجمة: أخبرتني أنها لا تملك سيارة. (استخدام told مع مفعول به، وsaid بدون مفعول مباشر).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Direct Speech</th>
+                        <th>Reported Speech (Past Context)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>"I <b>am</b> hungry."</td>
+                        <td>He said (that) he <b>was</b> hungry.</td>
+                    </tr>
+                    <tr>
+                        <td>"I <b>will</b> call you."</td>
+                        <td>She told me (that) she <b>would</b> call me.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- شريط تنقل سفلي -->
+        <div class="nav-bar">
+            <a href="Part15.html" class="nav-btn">&rarr; السابق (الجزء 15)</a>
+            <span class="page-title">الجزء السادس عشر (Units 46 - 48)</span>
+            <a href="Part17.html" class="nav-btn">التالي (الجزء 17) &larr;</a>
+        </div>
+
+    </div>
+
+    <script>
+        function speakText(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                var msg = new SpeechSynthesisUtterance();
+                msg.text = text;
+                msg.lang = 'en-US';
+                msg.rate = 0.85;
+                window.speechSynthesis.speak(msg);
+            } else {
+                alert("متصفحك لا يدعم النطق الصوتي التلقائي.");
+            }
+        }
+
+        function showWord(e, en, ar) {
+            if (e && e.stopPropagation) {
+                e.stopPropagation();
+            } else {
+                window.event.cancelBubble = true;
+            }
+            
+            speakText(en);
+
+            var toast = document.getElementById("toast");
+            if (toast) {
+                toast.innerText = en + " : " + ar;
+                toast.className = "show";
+                setTimeout(function() {
+                    toast.className = toast.className.replace("show", "");
+                }, 2500);
+            }
+        }
+
+        function speakLine(elem) {
+            var text = elem.innerText || elem.textContent;
+            speakText(text);
+        }
+
+        function toggleTranslation(id) {
+            var box = document.getElementById(id);
+            if (box) {
+                box.style.display = (box.style.display === "block") ? "none" : "block";
+            }
+        }
+    </script>
+</body>
+</html>
+

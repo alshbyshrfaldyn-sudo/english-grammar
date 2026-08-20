@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Grammar - الجزء الرابع والعشرون (Units 70 - 72)</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--card-bg);
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .page-title {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .unit-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .unit-header {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .unit-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            direction: ltr;
+            text-align: left;
+            display: block;
+        }
+
+        .line-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+            direction: ltr;
+        }
+
+        .line-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+
+        .line-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .line-content {
+            font-size: 1.1rem;
+            direction: ltr;
+            text-align: left;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: background 0.2s;
+            width: 100%;
+        }
+
+        .line-content:hover {
+            background-color: #f0f7fc;
+        }
+
+        .word {
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 4px;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .word:hover {
+            background-color: #3498db;
+            color: #ffffff !important;
+        }
+
+        .translation-box {
+            display: none;
+            background-color: #f1f8fe;
+            border-right: 4px solid var(--accent-color);
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: #444;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .grammar-table th, .grammar-table td {
+            border: 1px solid #e1e8ed;
+            padding: 10px 12px;
+            font-size: 0.95rem;
+        }
+
+        .grammar-table th {
+            background-color: #f4f6f8;
+            color: var(--primary-color);
+        }
+
+        #toast {
+            visibility: hidden;
+            min-width: 220px;
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px 20px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.3s, fadeout 0.3s 2.2s;
+        }
+
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+
+    <div id="toast"></div>
+
+    <div class="container">
+
+        <!-- شريط تنقل علوي -->
+        <div class="nav-bar">
+            <a href="Part23.html" class="nav-btn">&rarr; السابق (الجزء 23)</a>
+            <span class="page-title">الجزء الرابع والعشرون (Units 70 - 72)</span>
+            <a href="Part25.html" class="nav-btn">التالي (الجزء 25) &larr;</a>
+        </div>
+
+        <!-- Unit 70 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 70: somebody / anything / nowhere etc.</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u70_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Somebody has broken', 'لقد كسر شخص ما')">Somebody has broken</span>
+                    <span class="word" onclick="showWord(event, 'the window.', 'النافذة.')">the window.</span>
+                </div>
+            </div>
+            <div id="u70_1" class="translation-box">الترجمة: لقد كسر شخص ما النافذة. (استخدام somebody/someone للأشخاص في الجمل الإيجابية).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u70_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Is there anything', 'هل يوجد أي شيء')">Is there anything</span>
+                    <span class="word" onclick="showWord(event, 'in the box?', 'في الصندوق؟')">in the box?</span>
+                </div>
+            </div>
+            <div id="u70_2" class="translation-box">الترجمة: هل يوجد أي شيء في الصندوق؟ (استخدام anything في الأسئلة والنفي للأشياء).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>some- (+)</th>
+                        <th>any- (- / ?)</th>
+                        <th>no- (-)</th>
+                        <th>every- (All)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>People</b></td>
+                        <td>somebody / someone</td>
+                        <td>anybody / anyone</td>
+                        <td>nobody / no-one</td>
+                        <td>everybody / everyone</td>
+                    </tr>
+                    <tr>
+                        <td><b>Things</b></td>
+                        <td>something</td>
+                        <td>anything</td>
+                        <td>nothing</td>
+                        <td>everything</td>
+                    </tr>
+                    <tr>
+                        <td><b>Places</b></td>
+                        <td>somewhere</td>
+                        <td>anywhere</td>
+                        <td>nowhere</td>
+                        <td>everywhere</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 71 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 71: every and all</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u71_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Every student in the class', 'كل طالب في الفصل')">Every student in the class</span>
+                    <span class="word" onclick="showWord(event, 'passed the exam.', 'نجح في الاختبار.')">passed the exam.</span>
+                </div>
+            </div>
+            <div id="u71_1" class="translation-box">الترجمة: نجح كل طالب في الفصل في الاختبار. (استخدام every + اسم مفرد معدود + فعل مفرد).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u71_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'All the students', 'كل الطلاب')">All the students</span>
+                    <span class="word" onclick="showWord(event, 'were present today.', 'كانوا حاضرين اليوم.')">were present today.</span>
+                </div>
+            </div>
+            <div id="u71_2" class="translation-box">الترجمة: كان جميع الطلاب حاضرين اليوم. (استخدام all + اسم جمع + فعل جمع).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>Word</th>
+                        <th>Grammar Structure</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>every</b></td>
+                        <td>every + singular noun + singular verb</td>
+                        <td><b>Every day</b> is special.</td>
+                    </tr>
+                    <tr>
+                        <td><b>all</b></td>
+                        <td>all + plural/uncountable noun + plural/singular verb</td>
+                        <td><b>All days</b> are warm. / <b>All money</b> was spent.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unit 72 -->
+        <div class="unit-card">
+            <div class="unit-header">
+                <span class="unit-title">Unit 72: all / most / some / any / no / none</span>
+            </div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u72_1')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Most children', 'معظم الأطفال')">Most children</span>
+                    <span class="word" onclick="showWord(event, 'like playing games.', 'يحبون لعب الألعاب.')">like playing games.</span>
+                </div>
+            </div>
+            <div id="u72_1" class="translation-box">الترجمة: معظم الأطفال يحبون لعب الألعاب. (استخدام most + noun للعموم بدون of).</div>
+
+            <div class="line-container">
+                <button class="line-btn" onclick="toggleTranslation('u72_2')">شرح السطر</button>
+                <div class="line-content" onclick="speakLine(this)">
+                    <span class="word" onclick="showWord(event, 'Some of these books', 'بعض من هذه الكتب')">Some of these books</span>
+                    <span class="word" onclick="showWord(event, 'are very interesting.', 'ممتعة جداً.')">are very interesting.</span>
+                </div>
+            </div>
+            <div id="u72_2" class="translation-box">الترجمة: بعض من هذه الكتب ممتعة جداً. (استخدام of عندما نحدد مجموعة معينة باستخدام the/this/my...).</div>
+
+            <table class="grammar-table">
+                <thead>
+                    <tr>
+                        <th>General Usage (عام)</th>
+                        <th>Specific Usage (محدد مع of)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>all / most / some / no</b> + noun</td>
+                        <td><b>all (of) / most of / some of / none of</b> + the/my/these + noun</td>
+                    </tr>
+                    <tr>
+                        <td><i>Most people</i> like music.</td>
+                        <td><i>Most of the people</i> at the party were friendly.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- شريط تنقل سفلي -->
+        <div class="nav-bar">
+            <a href="Part23.html" class="nav-btn">&rarr; السابق (الجزء 23)</a>
+            <span class="page-title">الجزء الرابع والعشرون (Units 70 - 72)</span>
+            <a href="Part25.html" class="nav-btn">التالي (الجزء 25) &larr;</a>
+        </div>
+
+    </div>
+
+    <script>
+        function speakText(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                var msg = new SpeechSynthesisUtterance();
+                msg.text = text;
+                msg.lang = 'en-US';
+                msg.rate = 0.85;
+                window.speechSynthesis.speak(msg);
+            } else {
+                alert("متصفحك لا يدعم النطق الصوتي التلقائي.");
+            }
+        }
+
+        function showWord(e, en, ar) {
+            if (e && e.stopPropagation) {
+                e.stopPropagation();
+            } else {
+                window.event.cancelBubble = true;
+            }
+            
+            speakText(en);
+
+            var toast = document.getElementById("toast");
+            if (toast) {
+                toast.innerText = en + " : " + ar;
+                toast.className = "show";
+                setTimeout(function() {
+                    toast.className = toast.className.replace("show", "");
+                }, 2500);
+            }
+        }
+
+        function speakLine(elem) {
+            var text = elem.innerText || elem.textContent;
+            speakText(text);
+        }
+
+        function toggleTranslation(id) {
+            var box = document.getElementById(id);
+            if (box) {
+                box.style.display = (box.style.display === "block") ? "none" : "block";
+            }
+        }
+    </script>
+</body>
+</html>
+
